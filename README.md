@@ -1,2 +1,5 @@
 # gpgme_toy_programs
-Testing for gpgme lib
+To compile, get corresponding devel packages installed.
+
+$> gcc `gpgme-config --cflags --libs` <file_name>.c -o hello
+$> ./hello
