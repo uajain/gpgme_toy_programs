@@ -79,6 +79,8 @@ int main (int argc, char **argv)
 	/* Print the ASCII-armored encrypted text to stdoout */
 	printf("Encrypted text (%i bytes):\n%s\n", (int)nbytes, buffer);
 
+	gpgme_data_release (clear_text);
+	gpgme_data_release (encrypted_text);
 	gpgme_key_unref (key[0]);
 	gpgme_release (ctx);
 	free (buffer);
